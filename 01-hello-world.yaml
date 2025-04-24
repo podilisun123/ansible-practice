@@ -1,0 +1,11 @@
+- name: ping the servers
+  hosts: web
+  tasks: 
+  - name: ping server
+    ansible.builtin.ping:
+- name: print information
+  hosts: web
+  tasks:
+  - name: print some information
+    ansible.builtin.debug:
+      msg: "this first ansible play book on second tasks"
