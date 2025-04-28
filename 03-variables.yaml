@@ -14,3 +14,5 @@
       value: value from task level
     ansible.builtin.debug:
      msg: "the value of the variable is : {{ value }}" 
+
+     # 01-command line
