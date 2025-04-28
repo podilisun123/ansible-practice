@@ -1,0 +1,11 @@
+- name: using loops concept
+  hosts: localhost
+  tasks:
+  - name: print multiple software names
+    ansible.builtin.debug:
+      msg: "list of softwares are {{ item }}"
+    loop:
+    - terraform
+    - ansible
+    - k18
+    - mysql
