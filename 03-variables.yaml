@@ -4,10 +4,10 @@
     value: value from play level
   # vars_files:
   #   - vars.yaml
-  vars_prompt:
-    name: value
-    prompt: enter value is from prompt
-    private: false
+  # vars_prompt:
+  #   name: value
+  #   prompt: enter value is from prompt
+  #   private: false
   tasks:
   - name: print variable value
     # vars:
@@ -18,4 +18,4 @@
      # 01-command line
      # 02-task level
      # 03-file level
-     #
+     # 04-prompt level
