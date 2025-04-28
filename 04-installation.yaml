@@ -4,8 +4,8 @@
   - name: installation servers
     ansible.builtin.dnf:
     with_items:
-    - name: {{ item.name }}
-      status: {{ item.state }}
+    - name: "{{ item.name }}"
+      status: "{{ item.state }}"
     loop:
     - {name: git, state: present} 
     - {name: mysql, state: present}
