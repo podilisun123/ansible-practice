@@ -2,13 +2,12 @@
   hosts: localhost
   vars:
     value: value from play level
-  vars_file:
+  vars_files:
     - vars.yaml
   vars_prompt:
-    - name: value
-      prompt: enter value is from prompt
-      private: false
-
+    name: value
+    prompt: enter value is from prompt
+    private: false
   tasks:
   - name: print variable value
     vars:
