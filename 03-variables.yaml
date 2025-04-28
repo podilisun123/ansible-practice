@@ -1,7 +1,7 @@
 - name: multi level variables
   hosts: localhost
-  vars:
-    value: value from play level
+  # vars:
+  #   value: value from play level
   # vars_files:
   #   - vars.yaml
   # vars_prompt:
@@ -19,3 +19,4 @@
      # 02-task level
      # 03-file level
      # 04-prompt level
+     # 05-play level
