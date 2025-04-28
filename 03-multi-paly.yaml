@@ -1,8 +1,0 @@
-- name: multi level variables
-  hosts: localhost
-  vars_files:
-  - vars.yaml
-  tasks:
-  - name: print the variable value
-    ansible.builtin.debug:
-      msg: "the valus of name is {{ name }}"
