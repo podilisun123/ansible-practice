@@ -1,0 +1,11 @@
+- name: multiple softwares installation
+  hosts: web
+  tasks:
+  - name: installation servers
+    ansible.builtin.dnf:
+    - name: {{ item.name }}
+      status: {{ item.state }}
+    loop:
+    - {name: git, state: present} 
+    - {name: mysql, state: present}
+    - {name: postfix, state: present}
