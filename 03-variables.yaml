@@ -10,8 +10,8 @@
     private: false
   tasks:
   - name: print variable value
-    vars:
-      value: value from task level
+    # vars:
+    #   value: value from task level
     ansible.builtin.debug:
      msg: "the value of the variable is : {{ value }}" 
 
