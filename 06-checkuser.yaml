@@ -1,0 +1,12 @@
+- name: check the user exist or not
+  hosts: localhost
+  become: yes
+  tasks:
+  - name: check user
+    ansible.builtin.command: id expense
+    register: USER 
+    ignore_errors: true
+  - name: print the user information
+    ansible.builtin.debug:
+      msg: " user info is {{ USER }}"
+
