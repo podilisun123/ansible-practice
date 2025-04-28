@@ -1,0 +1,17 @@
+- name: multi level variables
+  hosts: localhost
+  vars:
+    value: value from play level
+  vars_file:
+    - vars.yaml
+  vars_prompt:
+    - name: value
+      prompt: enter value is from prompt
+      private: false
+
+  tasks:
+  - name: print variable value
+    vars:
+      value: value from task level
+    ansible.builtin.debug:
+     msg: "the value of the variable is : {{ value }}" 
