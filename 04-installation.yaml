@@ -3,6 +3,7 @@
   tasks:
   - name: installation servers
     ansible.builtin.dnf:
+    with_items:
     - name: {{ item.name }}
       status: {{ item.state }}
     loop:
